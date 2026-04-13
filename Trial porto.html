@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RR. Marietadhiyan Puri Firdausi – HR & People Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+
+  --navy: #0F2847;
+
+  --navy-mid: #1A3D6E;
+
+  --teal: #1D9E75;
+
+  --teal-light: #E1F5EE;
+
+  --amber: #BA7517;
+
+  --amber-light: #FAEEDA;
+
+  --coral: #D85A30;
+
+  --coral-light: #FAECE7;
+
+  --pink: #993556;
+
+  --blue: #185FA5;
+
+  --sand: #F7F4EF;
+
+  --stone: #E8E4DC;
+
+  --muted: #7A7068;
+
+  --text: #1C1810;
+
+  --white: #FFFFFF;
+
+  --serif: 'DM Serif Display', Georgia, serif;
+
+  --sans: 'DM Sans', system-ui, sans-serif;
+
+  --radius: 12px;
+
+  --radius-sm: 6px;
+
+}
+
+body { font-family: var(--sans); background: var(--sand); color: var(--text); min-height: 100vh; line-height: 1.6; }
+
+ 
+
+/* NAV */
+
+nav {
+
+  position: sticky; top: 0;
+
+  background: rgba(247,244,239,0.95);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid var(--stone);
+
+  padding: 0 2rem;
+
+  z-index: 100;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  height: 56px;
+
+}
+
+.nav-logo { font-family: var(--serif); font-size: 18px; color: var(--navy); }
+
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+
+.nav-links a {
+
+  font-size: 12px; font-weight: 500; color: var(--muted);
+
+  text-decoration: none; letter-spacing: 0.08em;
+
+  text-transform: uppercase; transition: color 0.2s; cursor: pointer;
+
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--navy); }
+
+ 
+
+/* SECTIONS */
+
+section { display: none; }
+
+section.active { display: block; }
+
+ 
+
+/* HERO */
+
+.hero { max-width: 860px; margin: 0 auto; padding: 5rem 2rem 4rem; }
+
+.hero-eyebrow {
+
+  display: inline-flex; align-items: center; gap: 8px;
+
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+
+  text-transform: uppercase; color: var(--teal);
+
+  background: var(--teal-light); padding: 5px 14px;
+
+  border-radius: 100px; margin-bottom: 1.5rem;
+
+}
+
+.hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+
+.hero h1 {
+
+  font-family: var(--serif);
+
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+
+  line-height: 1.1; color: var(--navy);
+
+  margin-bottom: 1.2rem; letter-spacing: -0.02em;
+
+}
+
+.hero h1 em { font-style: italic; color: var(--teal); }
+
+.hero-desc { font-size: 16px; color: var(--muted); max-width: 560px; line-height: 1.8; margin-bottom: 2rem; }
+
+.hero-stats {
+
+  display: grid; grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px; background: var(--stone);
+
+  border: 1px solid var(--stone); border-radius: var(--radius);
+
+  overflow: hidden; margin-bottom: 2.5rem; max-width: 520px;
+
+}
+
+.stat { background: var(--white); padding: 1.2rem 1.4rem; text-align: center; }
+
+.stat-num { font-family: var(--serif); font-size: 2rem; color: var(--navy); line-height: 1; display: block; margin-bottom: 4px; }
+
+.stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tag { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 100px; border: 1px solid; }
+
+.tag-navy { background: var(--navy); color: white; border-color: var(--navy); }
+
+.tag-outline { background: transparent; color: var(--navy); border-color: var(--stone); }
+
+ 
+
+/* PROJECTS */
+
+.projects-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+.section-title { font-family: var(--serif); font-size: 1.9rem; color: var(--navy); margin-bottom: 0.4rem; letter-spacing: -0.02em; }
+
+.section-sub { font-size: 14px; color: var(--muted); margin-bottom: 2rem; }
+
+.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2rem; }
+
+.filter-btn {
+
+  font-size: 12px; font-weight: 500; padding: 6px 14px;
+
+  border-radius: 100px; border: 1px solid var(--stone);
+
+  background: var(--white); color: var(--muted);
+
+  cursor: pointer; transition: all 0.18s; font-family: var(--sans);
+
+}
+
+.filter-btn.active, .filter-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
+
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
+
+.project-card {
+
+  background: var(--white); border: 1px solid var(--stone);
+
+  border-radius: var(--radius); overflow: hidden;
+
+  transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+
+}
+
+.project-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(15,40,71,0.10); }
+
+.project-card.hidden { display: none; }
+
+.project-thumb {
+
+  height: 120px; display: flex;
+
+  align-items: center; justify-content: center;
+
+  font-size: 2.8rem; position: relative;
+
+}
+
+.thumb-hr { background: linear-gradient(135deg, #0F2847 60%, #1A3D6E); }
+
+.thumb-people { background: linear-gradient(135deg, #1D9E75 50%, #085041); }
+
+.thumb-data { background: linear-gradient(135deg, #BA7517 50%, #633806); }
+
+.thumb-cx { background: linear-gradient(135deg, #993556 50%, #4B1528); }
+
+.thumb-content { background: linear-gradient(135deg, #185FA5 50%, #042C53); }
+
+.project-body { padding: 1rem 1.1rem 1rem; }
+
+.project-cat { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 5px; }
+
+.cat-hr { color: var(--navy-mid); }
+
+.cat-people { color: var(--teal); }
+
+.cat-data { color: var(--amber); }
+
+.cat-cx { color: var(--pink); }
+
+.cat-content { color: var(--blue); }
+
+.project-title { font-family: var(--serif); font-size: 1rem; color: var(--navy); margin-bottom: 6px; line-height: 1.3; }
+
+.project-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+
+.result-item { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--text); font-weight: 500; margin-bottom: 4px; }
+
+.result-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+
+.dot-hr { background: var(--navy-mid); }
+
+.dot-people { background: var(--teal); }
+
+.dot-data { background: var(--amber); }
+
+.dot-cx { background: var(--pink); }
+
+.dot-content { background: var(--blue); }
+
+.project-footer {
+
+  display: flex; align-items: center; justify-content: space-between;
+
+  padding: 8px 1.1rem; border-top: 1px solid var(--stone); background: var(--sand);
+
+}
+
+.project-year { font-size: 11px; color: var(--muted); font-weight: 500; }
+
+.view-btn { font-size: 11px; font-weight: 600; color: var(--teal); cursor: pointer; }
+
+ 
+
+/* MODAL */
+
+.modal-overlay {
+
+  display: none; position: fixed; inset: 0;
+
+  background: rgba(15,40,71,0.55); z-index: 200;
+
+  align-items: center; justify-content: center; padding: 1.5rem;
+
+}
+
+.modal-overlay.open { display: flex; }
+
+.modal {
+
+  background: var(--white); border-radius: 16px;
+
+  max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto;
+
+}
+
+.modal-head {
+
+  height: 150px; display: flex; align-items: center; justify-content: center;
+
+  border-radius: 16px 16px 0 0; position: relative;
+
+}
+
+.modal-close {
+
+  position: absolute; top: 12px; right: 14px;
+
+  width: 28px; height: 28px;
+
+  background: rgba(255,255,255,0.2); border: none;
+
+  border-radius: 50%; color: white; font-size: 14px;
+
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+
+}
+
+.modal-body { padding: 1.5rem; }
+
+.modal-cat { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+
+.modal-title { font-family: var(--serif); font-size: 1.4rem; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
+
+.modal-context { font-size: 13px; color: var(--muted); margin-bottom: 1rem; font-weight: 500; }
+
+.modal-desc { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+
+.modal-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; margin-top: 1rem; }
+
+.modal-result {
+
+  display: flex; gap: 10px; align-items: flex-start;
+
+  margin-bottom: 6px; font-size: 13.5px; line-height: 1.5;
+
+}
+
+.modal-result-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+
+.modal-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tool-chip {
+
+  font-size: 11px; font-weight: 500; padding: 3px 10px;
+
+  border-radius: 100px; background: var(--sand);
+
+  color: var(--navy); border: 1px solid var(--stone);
+
+}
+
+ 
+
+/* ABOUT */
+
+.about-wrap { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
+
+.about-intro {
+
+  background: var(--white); border: 1px solid var(--stone);
+
+  border-radius: var(--radius); padding: 1.4rem;
+
+  font-size: 14px; line-height: 1.85; color: var(--text); margin-bottom: 1.5rem;
+
+}
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+
+.about-card { background: var(--white); border: 1px solid var(--stone); border-radius: var(--radius); padding: 1.2rem; }
+
+.about-card-label { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+
+.skill-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; font-size: 12.5px; }
+
+.skill-bar-bg { width: 90px; height: 4px; background: var(--stone); border-radius: 100px; overflow: hidden; }
+
+.skill-bar-fill { height: 100%; border-radius: 100px; background: var(--teal); }
+
+.cert-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; font-size: 13px; }
+
+.cert-icon {
+
+  width: 26px; height: 26px; border-radius: var(--radius-sm);
+
+  background: var(--teal-light); color: var(--teal);
+
+  display: flex; align-items: center; justify-content: center;
+
+  font-size: 13px; flex-shrink: 0;
+
+}
+
+.cert-name { font-weight: 500; color: var(--navy); font-size: 13px; }
+
+.cert-year { font-size: 11px; color: var(--muted); }
+
+.timeline-item { display: flex; gap: 12px; margin-bottom: 12px; }
+
+.timeline-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--teal); flex-shrink: 0; margin-top: 4px; }
+
+.timeline-title { font-weight: 500; color: var(--navy); font-size: 12.5px; }
+
+.timeline-meta { font-size: 11px; color: var(--muted); }
+
+ 
+
+/* CONTACT */
+
+.contact-wrap { max-width: 540px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+
+.contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left; }
+
+.contact-card {
+
+  background: var(--white); border: 1px solid var(--stone);
+
+  border-radius: var(--radius); padding: 1rem 1.2rem;
+
+  display: flex; gap: 10px; align-items: center;
+
+  text-decoration: none; transition: border-color 0.18s;
+
+}
+
+.contact-card:hover { border-color: var(--teal); }
+
+.contact-icon {
+
+  width: 36px; height: 36px; border-radius: 8px;
+
+  display: flex; align-items: center; justify-content: center;
+
+  font-size: 16px; flex-shrink: 0; font-weight: 600;
+
+}
+
+.contact-label { font-size: 11px; color: var(--muted); font-weight: 500; }
+
+.contact-val { font-size: 13px; color: var(--navy); font-weight: 500; }
+
+ 
+
+@media (max-width: 580px) {
+
+  .about-grid { grid-template-columns: 1fr; }
+
+  .contact-links { grid-template-columns: 1fr; }
+
+  .nav-links { gap: 1.2rem; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+ 
+
+<nav>
+
+  <div class="nav-logo">Puri Firda</div>
+
+  <ul class="nav-links">
+
+    <li><a onclick="showSection('home')" class="active" id="nav-home">Home</a></li>
+
+    <li><a onclick="showSection('projects')" id="nav-projects">Projects</a></li>
+
+    <li><a onclick="showSection('about')" id="nav-about">About</a></li>
+
+    <li><a onclick="showSection('contact')" id="nav-contact">Contact</a></li>
+
+  </ul>
+
+</nav>
+
+ 
+
+<!-- HOME -->
+
+<section id="home" class="active">
+
+  <div class="hero">
+
+    <div class="hero-eyebrow">Open to opportunities</div>
+
+    <h1>RR. Marietadhiyan<br>Puri Firdausi —<br><em>HR & People Enthusiast</em> 
+    <em>”Where psychology meets HR”</em></h1>
+
+    <p class="hero-desc">A cum laude Psychology graduate with a people-first approach to HR. I've supported 20+ hires annually, coached individuals to 85%+ goal completion, and consistently turned complex workflows into structured, human-centered processes. I bring empathy, data, and accountability — because every great organization starts with the right people.</p>
+
+    <div class="hero-stats">
+
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Hires / year</span></div>
+
+      <div class="stat"><span class="stat-num">85%</span><span class="stat-label">Client goal rate</span></div>
+
+      <div class="stat"><span class="stat-num">3.78/4.00</span><span class="stat-label">GPA Cum Laude</span></div>
+
+    </div>
+
+    <div class="hero-tags">
+
+      <span class="tag tag-navy">HR Operation</span>
+
+      <span class="tag tag-outline">People Development</span>
+
+      <span class="tag tag-outline">Talent Acquisition</span>
+
+      <span class="tag tag-outline">Recruiter</span>
+
+     <span class="tag tag-outline">Coaching & Facilitation</span>
+
+      <span class="tag tag-outline">Mental Health Promotor</span>
+
+      <span class="tag tag-outline">Psychology</span>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+ 
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+  <div class="projects-wrap">
+
+    <h2 class="section-title">Projects</h2>
+
+    <p class="section-sub">A curated showcase of HR, people development, and operations work — click any card to see the full case study.</p>
+
+    <div class="filter-bar">
+
+      <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+
+      <button class="filter-btn" onclick="filterProjects('hr',this)">HR & Recruitment</button>
+
+      <button class="filter-btn" onclick="filterProjects('people',this)">People Dev</button>
+
+      <button class="filter-btn" onclick="filterProjects('data',this)">Data & Analytics</button>
+
+      <button class="filter-btn" onclick="filterProjects('cx',this)">CX & Ops</button>
+
+      <button class="filter-btn" onclick="filterProjects('content',this)">Content</button>
+
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+ 
+
+      <div class="project-card" data-cat="hr" onclick="openModal(0)">
+
+        <div class="project-thumb thumb-hr"><span style="font-size:2.8rem">🗂️</span></div>
+
+        <div class="project-body">
+
+          <div class="project-cat cat-hr">HR · Recruitment</div>
+
+          <div class="project-title">Recruitment Workflow Redesign</div>
+
+          <div class="project-desc">End-to-end audit & ATS-lite implementation at a garment manufacturing company.</div>
+
+          <div class="result-item"><div class="result-dot dot-hr"></div>Time-to-hire reduced by 20%</div>
+
+          <div class="result-item"><div class="result-dot dot-hr"></div>Recruiter efficiency up 15%</div>
+
+        </div>
+
+        <div class="project-footer"><span class="project-year">2023 · Prisha Kreasi</span><span class="view-btn">View →</span></div>
+
+      </div>
+
+ 
+
+      <div class="project-card" data-cat="hr" onclick="openModal(1)">
+
+        <div class="project-thumb thumb-hr"><span style="font-size:2.8rem">📋</span></div>
+
+        <div class="project-body">
+
+          <div class="project-cat cat-hr">HR · Onboarding</div>
+
+          <div class="project-title">Onboarding Standardization Program</div>
+
+          <div class="project-desc">Documentation kits and 30/60/90-day checklists across two companies.</div>
+
+          <div class="result-item"><div class="result-dot dot-hr"></div>100% documentation completeness</div>
+
+          <div class="result-item"><div class="result-dot dot-hr"></div>Admin errors reduced by 40%</div>
+
+        </div>
+
+        <div class="project-footer"><span class="project-year">2022–2023 · Akira & Prisha</span><span class="view-btn">View →</span></div>
+
+      </div>
+
+ 
+
+      <div class="project-card" data-cat="people" onclick="openModal(2)">
+
+        <div class="project-thumb thumb-people"><span style="font-size:2.8rem">🌱</span></div>
+
+        <div class="project-body">
+
+          <div class="project-cat cat-people">People Development</div>
+
+          <div class="project-title">IDP Framework for Coaching Clients</div>
+
+          <div class="project-desc">Scalable Individual Development Plan template, piloted with 20 clients.</div>
+
+          <div class="result-item"><div class="result-dot dot-people"></div>85%+ client goal completion</div>
+
+          <div class="result-item"><div class="result-dot dot-people"></div>30% improvement in follow-through</div>
+
+        </div>
+
+        <div class="project-footer"><span class="project-year">2021–2022 · Taraxacum.me</span><span class="view-btn">View →</span></div>
+
+      </div>
+
+ 
+
+      <div class="project-card" data-cat="people" onclick="openModal(3)">
+
+        <div class="project-thumb thumb-people"><span style="font-size:2.8rem">🧠</span></div>
+
+        <div class="project-body">
+
+          <div class="project-cat cat-people">People Dev · Mental Health</div>
+
+          <div class="project-title">Psychoeducation Series – Mental Health</div>
+
+          <div class="project-desc">Facilitated structured MH programs for 200+ participants across 3 organizations.</div>
+
+          <div class="result-item"><div class="result-dot dot-people"></div>30% increase in MH awareness</div>
+
+          <div class="result-item"><div class="result-dot dot-people"></div>200+ cumulative participants</div>
+
+        </div>
+
+        <div class="project-footer"><span class="project-year">2023–2024 · Paradigma / TAZKIA</span><span class="view-btn">View →</span></div>
+
+      </div>
+
+ 
+
+      <div class="project-card" data-cat="data" onclick="openModal(4)">
+
+        <div class="project-thumb thumb-data"><span style="font-size:2.8rem">📊</span></div>
+
+        <div class="project-body">
+
+          <div class="project-cat cat-data">Data · HR Analytics</div>
+
+          <div class="project-title">HR Documentation & Tracking Overhaul</div>
+
+          <div class="project-desc">Rebuilt candidate databases and HR data systems from fragmented to centralized.</div>
+
+          <div class="result-item"><div class="result-dot dot-data"></div>Data accuracy improved 25%</div>
+
+          <div class="result-item"><div class="result-dot dot-data"></div>100% employee record completeness</div>
+
+        </div>
+
+        <div class="project-footer"><span class="project-year">2022–2026 · Prisha Kreasi</span><span class="view-btn">View →</span></div>
+
+      </div>
+
+ 
+
+      <div class="project-card" data-cat="data" onclick="openModal(5)">
+
+        <div class="project-thumb thumb-data"><span style="font-size:2.8rem">📈</span></div>
+
+        <div class="project-body">
+
+          <div class="project-cat cat-data">Data · Content Analytics</div>
+
+          <div class="project-title">Content Performance Dashboard</div>
+
+          <div class="project-desc">Google Sheets dashboard integrating multi-platform metrics to guide content strategy.</div>
+
+          <div class="result-item"><div class="result-dot dot-data"></div>Engagement rate up 30%</div>
+
+          <div class="result-item"><div class="result-dot dot-data"></div>Weekly data-driven decisions</div>
+
+        </div>
+
+        <div class="project-footer"><span class="project-year">2023 · Beautyfaar.co</span><span class="view-btn">View →</span></div>
+
+      </div>
+
+ 
+
+      <div class="project-card" data-cat="cx" onclick="openModal(6)">
+
+        <div class="project-thumb thumb-cx"><span style="font-size:2.8rem">🎯</span></div>
+
+        <div class="project-body">
+
+          <div class="project-cat cat-cx">CX · Operations</div>
+
+          <div class="project-title">Global Campaign Performance</div>
+
+          <div class="project-desc">Managed CX & moderation across 3 global campaigns at 80–120+ interactions/day.</div>
+
+          <div class="result-item"><div class="result-dot dot-cx"></div>98%+ policy compliance</div>
+
+          <div class="result-item"><div class="result-dot dot-cx"></div>90%+ first contact resolution</div>
+
+        </div>
+
+        <div class="project-footer"><span class="project-year">2024–2025 · Teleperformance ID</span><span class="view-btn">View →</span></div>
+
+      </div>
+
+ 
+
+      <div class="project-card" data-cat="content" onclick="openModal(7)">
+
+        <div class="project-thumb thumb-content"><span style="font-size:2.8rem">✨</span></div>
+
+        <div class="project-body">
+
+          <div class="project-cat cat-content">Content · Digital</div>
+
+          <div class="project-title">Social Media Strategy – Beautyfaar.co</div>
+
+          <div class="project-desc">Full digital content strategy for a beauty brand — from pillars to publishing.</div>
+
+          <div class="result-item"><div class="result-dot dot-content"></div>Engagement rate up 30%</div>
+
+          <div class="result-item"><div class="result-dot dot-content"></div>4 content pillars established</div>
+
+        </div>
+
+        <div class="project-footer"><span class="project-year">Jan–May 2023 · Beautyfaar.co</span><span class="view-btn">View →</span></div>
+
+      </div>
+
+ 
+
+    </div>
+
+  </div>
+
+</section>
+
+ 
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="about-wrap">
+
+    <h2 class="section-title">About</h2>
+
+    <p class="section-sub">Psychology, people, and processes — my three pillars.</p>
+
+    <div class="about-intro">
+
+      Hi, I'm Puri Firda — a Cum Laude Psychology graduate (GPA 3.78/4.00) with a deep belief that good HR is applied psychology. My career has straddled recruitment operations, behavioral coaching, customer experience, and digital content, all united by one thread: understanding and supporting people to do their best work.
+From supporting 20+ hires annually and streamlining recruitment workflows, to coaching individuals toward real, measurable growth with an 85%+ goal completion rate — all united by one thread: understand to bring structure, empathy, and accountability to every role. Because behind every process is a person, and I take both seriously.</strong>
+
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-card">
+
+        <div class="about-card-label">Skills proficiency</div>
+
+        <div class="skill-row"><span>People Development</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+
+        <div class="skill-row"><span>Talent Acquisition</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+
+        <div class="skill-row"><span>HR Documentation</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+
+        <div class="skill-row"><span>Coaching & Facilitation</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:87%"></div></div></div>
+
+        <div class="skill-row"><span>CX & Operations</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div></div>
+
+        <div class="skill-row"><span>Data Tracking & KPIs</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div></div>
+
+      </div>
+
+      <div class="about-card">
+
+        <div class="about-card-label">Certifications</div>
+
+        <div class="cert-item">
+
+          <div class="cert-icon">🎓</div>
+
+          <div><div class="cert-name">HR Lite Academy</div><div class="cert-year">HR Fundamentals · 2025–2026</div></div>
+
+        </div>
+
+        <div class="cert-item">
+
+          <div class="cert-icon">🌐</div>
+
+          <div><div class="cert-name">EF SET C1 Advanced</div><div class="cert-year">Score 65/100 · 2025</div></div>
+
+        </div>
+
+        <div class="cert-item">
+
+        <div class="cert-icon">🌐</div>
+
+          <div><div class="cert-name">English TOEFL ITP</div><div class="cert-year">Score 493 · 2024</div></div>
+
+        </div>
+
+        <div class="cert-item">
+
+          <div class="cert-icon">🤝</div>
+
+          <div><div class="cert-name">Peer Counselor Training</div><div class="cert-year">Paradigma · 2023</div></div>
+
+        </div>
+
+        <div style="margin-top:14px;">
+
+          <div class="about-card-label">Languages</div>
+
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;">
+
+            <span class="tag tag-navy" style="font-size:11px;padding:4px 10px;">Indonesian – Native</span>
+
+            <span class="tag tag-outline" style="font-size:11px;padding:4px 10px;">English – C1 Advanced – EF SET 65/100; TOEFL ITP 493</span>
+
+            <span class="tag tag-outline" style="font-size:11px;padding:4px 10px;">Japanese – Passive</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="about-card" style="grid-column:1/-1;">
+
+        <div class="about-card-label">Experience timeline</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 2rem;">
+
+          <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-title">HR Talent Acquisition & Recruitment Admin – Prisha Kreasi</div><div class="timeline-meta">Jun 2022 – Feb 2026 · Garmen Manufacture</div></div></div>
+
+          <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-title">Customer Expert – Teleperformance</div><div class="timeline-meta">Oct 2024 – Nov 2025 · Business Process Outsourcing (BPO)</div></div></div>
+
+          <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-title">HR & Recruitment – Akira Ltd.</div><div class="timeline-meta">Aug 2021 – Feb 2023 · Retail</div></div></div>
+
+          <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-title">People Dev Facilitator – Taraxacum.me</div><div class="timeline-meta">Jan 2021 – Present · Freelance</div></div></div>
+
+          <div class="timeline-item"><div class="timeline-dot" style="background:var(--amber)"></div><div><div class="timeline-title">Bachelor of Psychology – Cum Laude</div><div class="timeline-meta">Feb 2019 – Oct 2023 · UIN Salatiga</div></div></div>
+
+          <div class="timeline-item"><div class="timeline-dot" style="background:var(--blue)"></div><div><div class="timeline-title">Social Media Specialist – Beautyfaar.co</div><div class="timeline-meta">Jan – May 2023 · Beauty Industry</div></div></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+ 
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="contact-wrap">
+
+    <h2 class="section-title" style="text-align:center;">Let's connect</h2>
+
+    <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:0.5rem;">Open to HR, People Development, Recruitment, Talent Acquisition, and Operations roles. Reach out anytime.</p>
+
+    <div class="contact-links">
+
+      <a class="contact-card" href="mailto:purifirdd23@gmail.com">
+
+        <div class="contact-icon" style="background:var(--teal-light);color:var(--teal);">✉</div>
+
+        <div><div class="contact-label">Email</div><div class="contact-val">purifirdd23@gmail.com</div></div>
+
+      </a>
+
+      <a class="contact-card" href="tel:+6288985411256>
+
+        <div class="contact-icon" style="background:var(--amber-light);color:var(--amber);">📱</div>
+
+        <div><div class="contact-label">Phone / WA</div><div class="contact-val">+62 889-8541-1256</div></div>
+
+      </a>
+
+      <a class="contact-card" href="https://linkedin.com/in/x">
+
+        <div class="contact-icon" style="background:#E6F1FB;color:var(--blue);font-size:13px;">in</div>
+
+        <div><div class="contact-label">LinkedIn</div><div class="contact-val">linkedin.com/in/purifirda</div></div>
+
+      </a>
+
+      <a class="contact-card" href="https://purt.com">
+
+        <div class="contact-icon" style="background:var(--coral-light);color:var(--coral);">🔗</div>
+
+        <div><div class="contact-label">Website</div><div class="contact-val">purifirdaxuii.blogspot.com</div></div>
+
+      </a>
+
+      <a class="contact-card" href="https://purt.com">
+
+        <div class="contact-icon" style="background:var(--coral-light);color:var(--coral);">🔗</div>
+
+        <div><div class="contact-label">Portofolio</div><div class="contact-val">https://bit.ly/Portofolio_PuriFirda</div></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+ 
+
+<!-- MODAL -->
+
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
+
+  <div class="modal" id="modal">
+
+    <div class="modal-head" id="modal-head">
+
+      <button class="modal-close" onclick="closeModal()">✕</button>
+
+      <span id="modal-icon" style="font-size:3rem;"></span>
+
+    </div>
+
+    <div class="modal-body">
+
+      <div class="modal-cat" id="modal-cat"></div>
+
+      <div class="modal-title" id="modal-title"></div>
+
+      <div class="modal-context" id="modal-context"></div>
+
+      <div class="modal-desc" id="modal-desc"></div>
+
+      <div class="modal-label">Key outcomes</div>
+
+      <div id="modal-results"></div>
+
+      <div class="modal-label">Tools & methods</div>
+
+      <div class="modal-tools" id="modal-tools"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+ 
+
+<script>
+
+const projects = [
+
+  {
+
+    icon:'🗂️', bg:'linear-gradient(135deg,#0F2847 60%,#1A3D6E)',
+
+    cat:'HR · Recruitment', catColor:'#1A3D6E', dotColor:'#1A3D6E',
+
+    title:'Recruitment Workflow Redesign',
+
+    context:'Prisha Kreasi · Garment Manufacturing · 2023',
+
+    desc:'Conducted an end-to-end audit of the recruitment pipeline at Prisha Kreasi. Identified three critical bottleneck stages causing delays in candidate screening and offer delivery. Designed structured interview scorecards and a centralized ATS-lite tracking system in Google Sheets to streamline hiring manager communication and reduce duplicated effort.',
+
+    results:['Time-to-hire reduced by 20% within one full hiring cycle','Recruiter workload per cycle decreased by 15% through automated follow-up reminders','Structured interview scorecards improved consistency of candidate evaluation across hiring managers','Recruitment SOP documented and adopted as the standard operating procedure going forward'],
+
+    tools:['Google Sheets','Notion','Interview Scorecards','Recruitment SOP','Workforce Planning']
+
+  },
+
+  {
+
+    icon:'📋', bg:'linear-gradient(135deg,#0F2847 60%,#1A3D6E)',
+
+    cat:'HR · Onboarding', catColor:'#1A3D6E', dotColor:'#1A3D6E',
+
+    title:'Onboarding Standardization Program',
+
+    context:'Akira Ltd. & Prisha Kreasi · 2022–2023',
+
+    desc:'Designed a comprehensive onboarding documentation system across two companies in different industries (retail and manufacturing). Created checklists covering pre-joining, day-1 orientation, and 30/60/90-day milestones. Developed an employee data management SOP and digital filing structure to eliminate duplication and missing records.',
+
+    results:['100% HR documentation completeness achieved across all new hire cohorts','Admin error rate reduced by 40% vs prior unstructured process','30/60/90-day milestone framework adopted as the standard onboarding guide','New hire satisfaction feedback scores improved post-implementation'],
+
+    tools:['Google Drive','HR Documentation SOP','Onboarding Checklist Framework','Excel','Notion']
+
+  },
+
+  {
+
+    icon:'🌱', bg:'linear-gradient(135deg,#1D9E75 50%,#085041)',
+
+    cat:'People Development', catColor:'#1D9E75', dotColor:'#1D9E75',
+
+    title:'IDP Framework for Coaching Clients',
+
+    context:'Taraxacum.me · Freelance Initiative · 2021–2022',
+
+    desc:'Designed a scalable Individual Development Plan (IDP) template incorporating goal-setting methodologies, milestone tracking, self-reflection prompts, and behavioral accountability tools. Piloted with 20 diverse clients spanning students, early-career professionals, and mid-career changers. Iterated based on qualitative feedback across two cycles to improve usability and goal alignment.',
+
+    results:['85%+ client goal completion rate sustained across 10–15 active monthly clients','30% improvement in goal follow-through consistency after framework introduction','IDP adopted as the core tool for all new Taraxacum.me clients','Reduced session prep time by 25% through standardized progress documentation'],
+
+    tools:['IDP Template Design','Goal-Setting Frameworks','Notion','Progress Tracking Systems','1:1 Coaching','Psychoeducation']
+
+  },
+
+  {
+
+    icon:'🧠', bg:'linear-gradient(135deg,#1D9E75 50%,#085041)',
+
+    cat:'People Dev · Mental Health', catColor:'#1D9E75', dotColor:'#1D9E75',
+
+    title:'Psychoeducation Series – Mental Health',
+
+    context:'Paradigma · PIK Sahajasa · Biro Psikologi TAZKIA · 2023–2024',
+
+    desc:'Facilitated structured psychoeducational programs across three organizations covering mental health literacy, emotional regulation, self-care strategies, and crisis referral pathways. Each session was designed using evidence-based behavioral and cognitive frameworks. Maintained confidential case documentation for 15–20 clients per month while coordinating group logistics.',
+
+    results:['30% increase in participant mental health awareness based on pre/post evaluations','200+ cumulative participants across three organizations','Confidential case documentation maintained with zero data breach incidents','Crisis referral system established for participants requiring higher-level support'],
+
+    tools:['Psychoeducation Facilitation','CBT-based Frameworks','Case Documentation','Group Program Design','Crisis Referral Pathways']
+
+  },
+
+  {
+
+    icon:'📊', bg:'linear-gradient(135deg,#BA7517 50%,#633806)',
+
+    cat:'Data · HR Analytics', catColor:'#BA7517', dotColor:'#BA7517',
+
+    title:'HR Documentation & Tracking Overhaul',
+
+    context:'Prisha Kreasi · 2022–2026',
+
+    desc:'Rebuilt the candidate database and overall HR documentation system at Prisha Kreasi from a fragmented paper-and-email process into a centralized digital system. Developed standardized data entry templates, naming conventions, and filing protocols. Created a dashboard-style summary for monthly HR reporting and workforce planning discussions with management.',
+
+    results:['HR data accuracy improved by 25% as measured by monthly audit checks','100% employee record completeness for all active and incoming staff','Monthly HR reporting time reduced from ~6 hours to ~2 hours with templated dashboards','Compliance risk reduced through consistent documentation of contracts and evaluations'],
+
+    tools:['Google Sheets','HR Data Dashboard','Document Management SOP','Candidate Tracking System','Lark','Notion']
+
+  },
+
+  {
+
+    icon:'📈', bg:'linear-gradient(135deg,#BA7517 50%,#633806)',
+
+    cat:'Data · Content Analytics', catColor:'#BA7517', dotColor:'#BA7517',
+
+    title:'Content Performance Dashboard',
+
+    context:'Beautyfaar.co · 2023',
+
+    desc:'Built a performance tracking dashboard in Google Sheets aggregating engagement data from Instagram, TikTok, and other platforms. Integrated metrics including reach, engagement rate, saves, shares, and conversion indicators. Used weekly data to adjust content format, posting frequency, and hashtag strategy — enabling fully evidence-based content decisions.',
+
+    results:['Engagement rate increased by 30% over the tracked period','Weekly content calendar driven entirely by performance data','Identified top-performing formats, shifting strategy toward short-form educational content','Dashboard adopted as the ongoing analytics tool post-contract'],
+
+    tools:['Google Sheets','Instagram Analytics','TikTok Studio','Content Calendar','Canva','Performance Reporting']
+
+  },
+
+  {
+
+    icon:'🎯', bg:'linear-gradient(135deg,#993556 50%,#4B1528)',
+
+    cat:'CX · Operations', catColor:'#993556', dotColor:'#993556',
+
+    title:'Global Campaign Performance – Teleperformance',
+
+    context:'Teleperformance ID · Oct 2024 – Nov 2025',
+
+    desc:'Managed front-line customer experience and content moderation across three simultaneous global campaigns in a high-volume BPO environment. Handled 80–120+ interactions daily, requiring rapid context-switching, policy fluency, and consistent application of brand guidelines. Produced structured daily and weekly performance reports tracking FCR, CSAT, and compliance rates.',
+
+    results:['98%+ policy compliance accuracy sustained across all three campaigns','90%+ first contact resolution (FCR) rate through active listening and problem-solving','Shortlisted as Top Candidate in the Brand Ambassador Selection Program','Performance reports commended for consistency and accuracy by team supervisors'],
+
+    tools:['CRM Systems','Content Moderation Platforms','FCR Tracking','CSAT Monitoring','Performance Reporting','Stakeholder Communication']
+
+  },
+
+  {
+
+    icon:'✨', bg:'linear-gradient(135deg,#185FA5 50%,#042C53)',
+
+    cat:'Content · Digital Marketing', catColor:'#185FA5', dotColor:'#185FA5',
+
+    title:'Social Media Strategy – Beautyfaar.co',
+
+    context:'Beautyfaar.co · Jan–May 2023',
+
+    desc:'Developed and executed a full digital content strategy for a beauty brand from scratch. Responsibilities covered audience research, content pillar development, copy writing, visual design in Canva, and scheduling. Monitored performance analytics weekly to iterate strategy. All content was aligned to brand voice, aesthetic standards, and target demographic insights.',
+
+    results:['Engagement rate increased by 30% over the 5-month contract period','4 distinct content pillars established as the structural framework for ongoing content','Audience interaction quality improved through strategic CTA-driven caption writing','Content strategy documentation handed over as an operational asset for the brand'],
+
+    tools:['Canva','Content Strategy Framework','Instagram / TikTok','Analytics Monitoring','Copy Writing','Brand Alignment']
+
+  }
+
+];
+
+ 
+
+function showSection(id) {
+
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+
+  document.getElementById(id).classList.add('active');
+
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+
+  document.getElementById('nav-'+id).classList.add('active');
+
+  window.scrollTo(0,0);
+
+}
+
+ 
+
+function filterProjects(cat, btn) {
+
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+
+  btn.classList.add('active');
+
+  document.querySelectorAll('.project-card').forEach(card => {
+
+    card.classList.toggle('hidden', cat !== 'all' && card.dataset.cat !== cat);
+
+  });
+
+}
+
+ 
+
+function openModal(idx) {
+
+  const p = projects[idx];
+
+  document.getElementById('modal-head').style.background = p.bg;
+
+  document.getElementById('modal-icon').textContent = p.icon;
+
+  document.getElementById('modal-cat').textContent = p.cat;
+
+  document.getElementById('modal-cat').style.color = p.catColor;
+
+  document.getElementById('modal-title').textContent = p.title;
+
+  document.getElementById('modal-context').textContent = p.context;
+
+  document.getElementById('modal-desc').textContent = p.desc;
+
+  const res = document.getElementById('modal-results');
+
+  res.innerHTML = p.results.map(r =>
+
+    `<div class="modal-result"><div class="modal-result-dot" style="background:${p.dotColor}"></div><span>${r}</span></div>`
+
+  ).join('');
+
+  document.getElementById('modal-tools').innerHTML = p.tools.map(t =>
+
+    `<span class="tool-chip">${t}</span>`
+
+  ).join('');
+
+  document.getElementById('modal-overlay').classList.add('open');
+
+}
+
+ 
+
+function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); }
+
+function closeModalOutside(e) { if (e.target.id === 'modal-overlay') closeModal(); }
+
+</script>
+
+</body>
+
+</html>
